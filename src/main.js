@@ -1,4 +1,6 @@
 import dayjs from "dayjs";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css"; //  assert { type: "css" };
 
 console.log("Hello, World!");
 console.log(dayjs().format("{YYYY} MM-DD   HH:mm"));
@@ -8,7 +10,10 @@ var lat = 53.551086;
 var lng = 9.993682;
 
 var map = L.map("map").setView([lat, lng], 13);
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+//const targetUrl = "http://localhost:8180/https/__s__.tile.openstreetmap.org/__z__/__x__/__y__.png?s={s}&z={z}&x={x}&y={y}";
+const targetUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+
+L.tileLayer(targetUrl, {
   maxZoom: 19,
 }).addTo(map);
 

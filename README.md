@@ -58,3 +58,11 @@ Build an bundle:
 ```sh
 npm run build
 ```
+
+### Start Wiremock for capture
+```sh
+docker run -it --rm \
+  -p 8080:8080 \
+  --name wiremock \
+  wiremock/wiremock:3.9.1
+```
