@@ -9,7 +9,7 @@ console.log(dayjs().format("{YYYY} MM-DD   HH:mm"));
 var lat = 53.551086;
 var lng = 9.993682;
 
-var map = L.map("map").setView([lat, lng], 13);
+var map = L.map("map", {editable: true}).setView([lat, lng], 13);
 //const targetUrl = "http://localhost:8180/https/__s__.tile.openstreetmap.org/__z__/__x__/__y__.png?s={s}&z={z}&x={x}&y={y}";
 const targetUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 
@@ -30,3 +30,7 @@ console.log(
   `mapBounds: ${JSON.stringify(mapBounds)}, bounds: ${JSON.stringify(bounds)}`
 );
 map.fitBounds(bounds);
+
+//new L.Layer.Highlight().do({street: 'Rathausmarkt', city: 'Hamburg'}).addTo(map);
+
+new L.Layer.Highlight().do({q: 'Rathausmarkt, Hamburg'}).addTo(map);
