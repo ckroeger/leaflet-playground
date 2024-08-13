@@ -24,6 +24,7 @@
   "dependencies": {
     "dayjs": "^1.11.12",
     "leaflet": "^1.9.4",
+    "leaflet-heatmap": "^1.0.0",
     "rollup-plugin-import-css": "^3.5.0"
   }
 }
