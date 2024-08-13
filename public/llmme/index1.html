@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaflet - Maps made easy</title>
+    <!--
+        add the Leaflet CSS file from cdn
+    -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <!--
+        add the custom CSS 
+    -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100vh;
+        width: 100vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- add the Leaflet JS file from cdn -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- add the custom JS -->
+    <script>
+      // Koordinaten des REPLY-Gebäudes
+      const replyPos = [53.54779034373158, 9.983750903972437];
+      // Initialisiere die Karte
+      var map = L.map("map").setView(replyPos, 20);
+
+      // Füge ein OpenStreetMap-Tilelayer hinzu
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap",
+      }).addTo(map);
+    </script>
+  </body>
+</html>
