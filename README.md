@@ -1,7 +1,4 @@
-# static-html-template
-A template repository to bootstrap simple html content.
-It is a GitHub template for HTML pages with a live server and Rollup bundling.
-
+# Leaflet Playground
 
 ## Features
 
@@ -10,6 +7,7 @@ It is a GitHub template for HTML pages with a live server and Rollup bundling.
 - Bundling with Rollup
 
 ## Structure
+
 ```
 ├── dist/                  # Output directory for bundled files
 ├── src/                   # Source directory for HTML, CSS, and JavaScript files
@@ -28,21 +26,6 @@ It is a GitHub template for HTML pages with a live server and Rollup bundling.
 
 - Node.js installed
 
-### Installation
-
-1. Clone the repository:
-
-    ```sh
-    git clone https://github.com/your-username/my-html-template.git
-    cd my-html-template
-    ```
-
-2. Install the dependencies:
-
-    ```sh
-    npm install
-    ```
-
 ### Development
 
 Start the live server and watch for changes:
@@ -59,10 +42,8 @@ Build an bundle:
 npm run build
 ```
 
-### Start Wiremock for capture
-```sh
-docker run -it --rm \
-  -p 8080:8080 \
-  --name wiremock \
-  wiremock/wiremock:3.9.1
-```
+# Sources to investigate
+
+- [leaflet-extras/leaflet-providers: An extension to Leaflet that contains configurations for various free tile providers.](https://github.com/leaflet-extras/leaflet-providers?tab=readme-ov-file)
+- [Leaflet Provider Demo](https://leaflet-extras.github.io/leaflet-providers/preview/)
+-
